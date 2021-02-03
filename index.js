@@ -233,8 +233,4 @@ async function promptMessage(message, author, time, reactions) {
     return message.awaitReactions(filter, { max: 1, time: time }).then(collected => collected.first() && collected.first().emoji.name);
 }
  
- if (command === `${prefix}hallo`) {
- 
-        return message.channel.send("https://media.tenor.com/images/a46b709635801af8ce5acb4e61f4b1d1/tenor.png");
- 
-})
+});

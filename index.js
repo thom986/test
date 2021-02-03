@@ -235,7 +235,7 @@ async function promptMessage(message, author, time, reactions) {
  
  if (command === `${prefix}hallo`) {
  
-        return message.channel.send("https://media1.tenor.com/images/05006ed09075a0d6965383797c3cea00/tenor.gif?itemid=17987788");
+        return message.channel.send("https://media.tenor.com/images/a46b709635801af8ce5acb4e61f4b1d1/tenor.png");
  
 });
 

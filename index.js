@@ -64,4 +64,44 @@ client.on("message", async message => {
         return message.channel.send(serverEmbed);
     }
  
-}); 
+});
+
+client.on('message', message => {
+
+    if (message.author.bot) return;
+    if (message.content.indexOf(prefix) !== 0) return;
+
+    const args = message.content.slice(prefix.length).trim().split(/ +/g);
+    const command = args.shift().toLowerCase();
+
+    if (command === 'rps') {
+        const acceptedReplies = ['steen', 'papier', 'schaar'];
+        const random = Math.floor((Math.random() * acceptedReplies.length));
+        const result = acceptedReplies[random];
+
+        const choice = args[0];
+        if (!choice) return message.channel.send(`Hoe te spelen: \`${prefix}rps <steen|papier|schaar>\``);
+        if (!acceptedReplies.includes(choice)) return message.channel.send(`Alleen deze antwoorden mogen: \`${acceptedReplies.join(', ')}\``);
+        
+        console.log('Bot Result:', result);
+        if (result === choice) return message.reply("Gelijk spel! we hadden de zelfde keus.");
+        
+        switch (choice) {
+            case 'steen': {
+                if (result === 'papier') return message.reply('Ik win!');
+                else return message.reply('Jij wint!');
+            }
+            case 'papier': {
+                if (result === 'schaar') return message.reply('Ik win!');
+                else return message.reply('Jij wint!');        
+            }
+            case 'schaar': {
+                if (result === 'steen') return message.reply('Ik win!');
+                else return message.reply('Jij wint!');
+            }
+            default: {
+                return message.channel.send(`Alleen deze antwoorden: \`${acceptedReplies.join(', ')}\``);
+            }
+        }
+    }
+});

@@ -237,6 +237,8 @@ async function promptMessage(message, author, time, reactions) {
 	message.channel.send('Pong.');
 } else if (message.content.startsWith(`${prefix}beep`)) {
 	message.channel.send('Boop.');
+} else if (message.content === `${prefix}server`) {
+	message.channel.send(`This server's name is: ${message.guild.name}`);
 }
  
 });

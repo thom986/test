@@ -34,6 +34,22 @@ client.on("message", async message => {
         // Embed wat we gaan laten tonen.
         var botEmbed = new discord.MessageEmbed()
             .setTitle('Bot info')
+            .setDescription("Maarten BOT! We hebben een eigen bot, gemaakt door Thom986 (contacteer hem voor suggesties of opmerkingen). Maarten is ook heel handig, hij kan namelijk mensen op fucken door ze te kicken(Alleen onder toezicht van een moderator). Verder is hij wel braaf")
+            .setColor("#4F98D2")
+            .addField("Bot naam", client.user.username)
+ 
+            .setThumbnail('https://i.imgur.com/3JxM4xZ.jpeg')
+            .setImage('https://i.imgur.com/uBLvfew.jpeg')
+            .setTimestamp()
+            .setFooter('maarten was er helaas niet', 'https://i.imgur.com/Ezu9ZV5.jpeg');
+ 
+        // Terug sturen van het bericht
+        return message.channel.send(botEmbed);
+    }
+	if (command === `${prefix}maartencommands`) {
+        // Embed wat we gaan laten tonen.
+        var botEmbed = new discord.MessageEmbed()
+            .setTitle('Bot info')
             .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), beep, server")
             .setColor("#4F98D2")
             .addField("Bot naam", client.user.username)
@@ -46,6 +62,7 @@ client.on("message", async message => {
         // Terug sturen van het bericht
         return message.channel.send(botEmbed);
     }
+   
  
     // .addFields(
     //     {name:"Bot naam",value: bot.user.username},

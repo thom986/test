@@ -233,4 +233,12 @@ async function promptMessage(message, author, time, reactions) {
     return message.awaitReactions(filter, { max: 1, time: time }).then(collected => collected.first() && collected.first().emoji.name);
 }
  
+ if (message.content.startsWith(`${prefix}ping`)) {
+	message.channel.send('Pong.');
+} else if (message.content.startsWith(`${prefix}beep`)) {
+	message.channel.send('Boop.');
+}
+ 
 });
+
+

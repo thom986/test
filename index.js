@@ -54,8 +54,8 @@ client.on("message", async message => {
             .setColor("#4F98D2")
             .addField("Bot naam", client.user.username)
  
-            .setThumbnail('https://i.imgur.com/3JxM4xZ.jpeg')
-            .setImage('https://i.imgur.com/uBLvfew.jpeg')
+            .setThumbnail('https://static.limburger.nl/Assets/Images_Upload/2019/06/08/dc1979ca-89d8-11e9-9a8b-379831f0eb46_web_translate_0_-68__scale_0.0974889_0.0974889__.jpg?maxheight=280&maxwidth=400')
+            .setImage('https://pbs.twimg.com/media/ECUrbrDX4AALbyC.jpg')
             .setTimestamp()
             .setFooter('maarten was er helaas niet', 'https://i.imgur.com/Ezu9ZV5.jpeg');
  

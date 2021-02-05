@@ -50,7 +50,7 @@ client.on("message", async message => {
         // Embed wat we gaan laten tonen.
         var botEmbed = new discord.MessageEmbed()
             .setTitle('Bot info')
-            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), beep, server")
+            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer beep, server")
             .setColor("#4F98D2")
             .addField("Bot naam", client.user.username)
  
@@ -256,6 +256,12 @@ async function promptMessage(message, author, time, reactions) {
 	message.channel.send('Boop.');
 } else if (message.content === `${prefix}server`) {
 	message.channel.send(`De naam van de server is: ${message.guild.name}`);
+} else if (message.content === `${prefix}pong`) {
+	message.channel.send(`ping`);
+} else if (message.content === `${prefix}mevrouw`) {
+	message.channel.send(`meneer`);
+} else if (message.content === `${prefix}meneer`) {
+	message.channel.send(`mevrouw`);
 }
  
 });

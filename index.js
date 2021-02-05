@@ -50,7 +50,7 @@ client.on("message", async message => {
         // Embed wat we gaan laten tonen.
         var botEmbed = new discord.MessageEmbed()
             .setTitle('Bot info')
-            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer beep, server")
+            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer beep, server, kpop?")
             .setColor("#4F98D2")
             .addField("Bot naam", client.user.username)
  
@@ -262,6 +262,8 @@ async function promptMessage(message, author, time, reactions) {
 	message.channel.send(`meneer`);
 } else if (message.content === `${prefix}meneer`) {
 	message.channel.send(`mevrouw`);
+} else if (message.content === `${prefix}kpop?`) {
+	message.channel.send(`Verschrikkelijk, wat pauper! (behalve gangnamstyle)`);
 }
  
 });

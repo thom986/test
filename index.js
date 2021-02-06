@@ -273,7 +273,7 @@ async function promptMessage(message, author, time, reactions) {
 } else if (message.content === `${prefix}genders?`) {
 	message.channel.send(`Gender maakt niet uit, *de één houd van piemeltjes en de ander van poesjes*`);
 } else if (message.content === `${prefix}goednieuws`) {
-	message.channel.send(`Ik heb goednieuws, u gaat dood.*`);
+	message.channel.send(`Ik heb goednieuws, u gaat dood.`);
 }  
  
 });

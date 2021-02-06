@@ -50,7 +50,7 @@ client.on("message", async message => {
         // Embed wat we gaan laten tonen.
         var botEmbed = new discord.MessageEmbed()
             .setTitle('Bot info')
-            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer, beep, server, kpop?, alleen thuis, slapen?")
+            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer, beep, server, kpop?, alleen thuis, slapen?, genders?")
             .setColor("#4F98D2")
             .addField("Bot naam", client.user.username)
  

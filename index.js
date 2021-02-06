@@ -270,7 +270,9 @@ async function promptMessage(message, author, time, reactions) {
 	message.channel.send(`Slapen is voor luie mensen! Ga lekker een boek lezen.`);
 } else if (message.content === `${prefix}alleen thuis`) {
 	message.channel.send(`Ik snack alles wat er in huis is.`);
-} 
+} else if (message.content === `${prefix}genders?`) {
+	message.channel.send(`Gender maakt niet uit, *de één houd van piemeltjes en de ander van poesjes*`);
+}  
  
 });
 

@@ -50,7 +50,7 @@ client.on("message", async message => {
         // Embed wat we gaan laten tonen.
         var botEmbed = new discord.MessageEmbed()
             .setTitle('Bot info')
-            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer, beep, server, kpop?, alleen thuis, slapen?, genders?")
+            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer, beep, server, kpop?, alleen thuis, slapen?, genders?, goednieuws")
             .setColor("#4F98D2")
             .addField("Bot naam", client.user.username)
  
@@ -272,6 +272,8 @@ async function promptMessage(message, author, time, reactions) {
 	message.channel.send(`Ik snack alles wat er in huis is.`);
 } else if (message.content === `${prefix}genders?`) {
 	message.channel.send(`Gender maakt niet uit, *de één houd van piemeltjes en de ander van poesjes*`);
+} else if (message.content === `${prefix}goednieuws `) {
+	message.channel.send(`Ik heb goednieuws, u gaat dood.*`);
 }  
  
 });

@@ -50,7 +50,7 @@ client.on("message", async message => {
         // Embed wat we gaan laten tonen.
         var botEmbed = new discord.MessageEmbed()
             .setTitle('Bot info')
-            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer beep, server, kpop?")
+            .setDescription("we hebben verschillende commands: Hallo, maarteninfo, joininfo, ping(negeer carl), pong, mevrouw, meneer, beep, server, kpop?, alleen thuis, slapen?")
             .setColor("#4F98D2")
             .addField("Bot naam", client.user.username)
  
@@ -257,14 +257,20 @@ async function promptMessage(message, author, time, reactions) {
 } else if (message.content === `${prefix}server`) {
 	message.channel.send(`De naam van de server is: ${message.guild.name}`);
 } else if (message.content === `${prefix}pong`) {
-	message.channel.send(`ping`);
+	message.channel.send(`ping.`);
 } else if (message.content === `${prefix}mevrouw`) {
-	message.channel.send(`meneer`);
+	message.channel.send(`Meneer`);
 } else if (message.content === `${prefix}meneer`) {
-	message.channel.send(`mevrouw`);
+	message.channel.send(`Mevrouw`);
 } else if (message.content === `${prefix}kpop?`) {
 	message.channel.send(`Verschrikkelijk, wat pauper! (behalve gangnamstyle)`);
-}
+} else if (message.content === `${prefix}kpop?`) {
+	message.channel.send(`Verschrikkelijk, wat pauper! (behalve gangnamstyle)`);
+} else if (message.content === `${prefix}slapen?`) {
+	message.channel.send(`Slapen is voor luie mensen! Ga lekker een boek lezen.`);
+} else if (message.content === `${prefix}alleen thuis`) {
+	message.channel.send(`Ik snack alles wat er in huis is.`);
+} 
  
 });
 

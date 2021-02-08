@@ -276,8 +276,8 @@ async function promptMessage(message, author, time, reactions) {
 	message.channel.send(`Ik heb goednieuws, u gaat dood.`);
 } 
 	
-if (command === 'rps') {
-        const acceptedReplies = ['rock', 'paper', 'scissors'];
+if (command === `${prefix}rps`) {
+        const acceptedReplies = ['steen', 'papier', 'schaar'];
         const random = Math.floor((Math.random() * acceptedReplies.length));
         const result = acceptedReplies[random];
 

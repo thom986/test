@@ -276,7 +276,7 @@ async function promptMessage(message, author, time, reactions) {
 	message.channel.send(`Ik heb goednieuws, u gaat dood.`);
 } 
 
-if (msg.startsWith(guildConf[message.guild.id].prefix + 'rps')) {
+if (command === `${prefix}rps`) {
         if (!args[1]) {
             return message.channel.send('Please include your choice.')
         }

@@ -281,7 +281,7 @@ if (command === `${prefix}rps`) {
         const random = Math.floor((Math.random() * acceptedReplies.length));
         const result = acceptedReplies[random];
 
-        const choice = args[0];
+        const choice = args[1];
         if (!choice) return message.channel.send(`How to play: \`${prefix}rps <rock|paper|scissors>\``);
         if (!acceptedReplies.includes(choice)) return message.channel.send(`Only these responses are accepted: \`${acceptedReplies.join(', ')}\``);
         

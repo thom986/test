@@ -275,6 +275,8 @@ async function promptMessage(message, author, time, reactions) {
 } else if (message.content === `${prefix}goednieuws`) {
 	message.channel.send(`Ik heb goednieuws, u gaat dood.`);
 }  
+
+if (msg.startsWith(guildConf[message.guild.id].prefix + 'sps')) { if (!args[1]) { return message.channel.send('Wat was je keus?') } let choices = ['steen', 'papier', 'schaar']; if (choices.includes((args[1]).toLowerCase())) { let number = Math.floor(Math.random() * 3); if (number == 1) { return message.channel.send('Het is gelijkspel, we hadden ' + (args[1]).toLowerCase()) } if (number == 2) { if ((args[1]).toLowerCase() == "steen") { return message.channel.send('Ik win, ik had papier.') } if ((args[1]).toLowerCase() == "papier") { return message.channel.send('Ik win, ik had schaar.') } if ((args[1]).toLowerCase() == "schaar") { return message.channel.send('Ik win, ik had steen.') } }
  
 });
 

@@ -275,8 +275,8 @@ async function promptMessage(message, author, time, reactions) {
 } else if (message.content === `${prefix}goednieuws`) {
 	message.channel.send(`Ik heb goednieuws, u gaat dood.`);
 } else if (message.content === `${prefix}invite`) {
-	message.channel.send(`https://discord.gg/wWjDDVWQFk`)
+	message.channel.send(`https://discord.gg/wWjDDVWQFk`);
 	
-});
+})
 
 

@@ -271,7 +271,7 @@ async function promptMessage(message, author, time, reactions) {
 } else if (message.content === `${prefix}alleen thuis`) {
 	message.channel.send(`Ik snack alles wat er in huis is.`);
 } else if (message.content === `${prefix}genders?`) {
-	message.channel.send(`Gender maakt niet uit, *de één houd van een clit in de mond en de ander een lul in de kont*`);
+	message.channel.send(`Gender maakt niet uit, *het gaat er om of je van een clit in je mond houd of een lullo in je kont*`);
 } else if (message.content === `${prefix}goednieuws`) {
 	message.channel.send(`Ik heb goednieuws, u gaat dood.`);
 } else if (message.content === `${prefix}invite`) {
